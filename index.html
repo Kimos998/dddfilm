@@ -8,31 +8,26 @@
 
 
   <style>
-       #movies {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* توسيط العناصر بنفس المسافة من اليمين واليسار */
+      #movies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 20px; /* مسافة متساوية من الحواف اليسار واليمين */
         }
 
-       
-
-        @media screen and (max-width: 600px) {
-            #movies {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-         .movie {
+        .movie {
             margin: 10px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             text-align: center;
-            width: 100%; /* تأكد من تعبئة العرض */
-            max-width: 400px; /* تحديد أقصى عرض */
+            width: 100%;
+        }
+
+        @media screen and (max-width: 600px) {
+            #movies {
+                grid-template-columns: 1fr; /* عمود واحد عندما يكون عرض الشاشة صغيرًا */
+            }
         }
     </style>
 
