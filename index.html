@@ -8,11 +8,14 @@
 
 
   <style>
-        #movies {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+       #movies {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* توسيط العناصر بنفس المسافة من اليمين واليسار */
         }
+
+       
 
         @media screen and (max-width: 600px) {
             #movies {
@@ -22,12 +25,14 @@
             }
         }
 
-        .movie {
+         .movie {
             margin: 10px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             text-align: center;
+            width: 100%; /* تأكد من تعبئة العرض */
+            max-width: 400px; /* تحديد أقصى عرض */
         }
     </style>
 
