@@ -8,15 +8,20 @@
 
 
   <style>
-      #movies {
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #movies {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* عرض الأعمدة يتقلص تدريجيًا */
             gap: 20px;
-            padding: 0 20px; /* مسافة متساوية من الحواف اليسار واليمين */
+            padding: 20px;
+             text-align: center;
         }
 
         .movie {
-            margin: 10px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -29,8 +34,9 @@
                 grid-template-columns: 1fr; /* عمود واحد عندما يكون عرض الشاشة صغيرًا */
             }
         }
+        img{border-radius: 20px;}
+        
     </style>
-
 
 <body>
     <div id="movies"></div>
