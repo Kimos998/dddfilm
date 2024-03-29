@@ -8,34 +8,64 @@
 
 
   <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
+       body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Set a base font family */
+}
 
-        #movies {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* عرض الأعمدة يتقلص تدريجيًا */
-            gap: 20px;
-            padding: 20px;
-             text-align: center;
-        }
+header {
+  background-color: #f0f0f0; /* Light background for header */
+  padding: 20px;
+}
 
-        .movie {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-            width: 100%;
-        }
+h1 {
+  font-size: 2em; /* Increase heading size slightly */
+  margin-bottom: 10px;
+}
 
-        @media screen and (max-width: 600px) {
-            #movies {
-                grid-template-columns: 1fr; /* عمود واحد عندما يكون عرض الشاشة صغيرًا */
-            }
-        }
-        img{border-radius: 20px;}
-        
+p {
+  color: #666; /* Subdued text color */
+}
+
+.section-title {
+  margin-top: 20px; /* Spacing after header */
+}
+
+#movies-container {
+  padding: 20px; /* Padding for spacing and consistency */
+}
+
+#movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
+  gap: 20px;
+  text-align: center;
+}
+
+.movie {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out; /* Add smooth hover effect for visual appeal */
+  cursor: pointer; /* Indicate clickable elements */
+}
+
+.movie:hover { /* Style for hover interaction */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
+}
+
+img {
+  border-radius: 20px;
+  width: 100%; /* Ensure images fill container width */
+}
+
+@media screen and (max-width: 600px) {
+  #movies {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+}
+
     </style>
 
 <body>
